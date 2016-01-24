@@ -1,0 +1,27 @@
+<table border="1">
+	<tr>
+		<th>Rank</th>
+		<th>Name</th>
+		<th>Tuition and Fees</th>
+		<th>Total enrollment</th>
+		<th>Fall 2014 acceptance rate</th>
+		<th>Average freshman retention rate</th>
+		<th>Graduation rate</th>
+	</tr>
+	<tbody>
+		<%@infofile.each do |college|%>
+			<tr>
+				<td><%=college["rank"]%></td>
+				<td><%=college["name"]%></td>
+				<td><%=college["tuition_fees"]%></td>
+				<td><%=college["total_enrollment"]%></td>
+				<td><%=college["acceptance_rate"]%></td>
+				<td><%=college["average_retention_rates"]%></td>
+				<td><%=college["graduation_rate"]%></td>
+			</tr>
+		<%end%>
+	</tbody>
+</table>
+<%= paginate @infofile%>
+
+
